@@ -1,0 +1,105 @@
+/* App.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.memory-page-wrapper {
+    background-color: #212529;
+    background-size:cover ;
+    padding-top: 100px;
+    padding-bottom: 100px;
+   }
+
+.gameboard {
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.5rem 0.8rem;
+    /* width: 200px; */
+    font-size: 1.2rem;
+    border-radius: 5%;
+    border-style: none;
+    background-color: white;
+    color:#9e7e3b;
+    /* margin-top: 4px; */
+    /* margin-left: 55%;*/
+}
+
+.button:hover {
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+
+
+.board {
+    display: grid;
+    margin: auto;
+    margin-top: 10 rem;
+    grid-template-columns: repeat(4, 9rem);
+    place-items: center;
+    row-gap: 2rem;
+    align-items: stretch;
+    justify-items: stretch;
+    align-content: center;
+}
+
+.comments {
+    padding: 0.25rem 1rem;
+    background-color: white;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+    border-radius: 2rem;
+}
+
+/* CSS for Card component */
+.face {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 8px;
+    /* TILLAGD: Ger en supertunn vit kantlinje som garanterat syns på alla fyra sidor */
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4); 
+}
+
+.back {
+    height: 6rem;
+    width: 6rem;
+    background-image: url("https://res.cloudinary.com/dj9sie6nl/image/upload/v1792529163/Anuya/memory/mem-front_p2yc8k.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    /* RÄTTAT: Ändrade från svart till en ljusare vit/transparent kant och lade till box-shadow för bottenlinjen */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.item .face {
+    position: absolute;
+    transform: rotateY(90deg);
+    transition: all ease-in 0.25s;
+
+}
+
+.toggled .face {
+    transform: rotateY(0deg);
+    transition-delay: 0.25s;
+}
+
+.item .back {
+    transition: all ease-in 0.25s;
+    transition-delay: 0.25s;
+}
+
+.toggled .back {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}

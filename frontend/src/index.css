@@ -1,0 +1,123 @@
+/* Hämta Montserrat-fonten från Google Fonts */
+@import url('https://googleapis.com');
+
+/* Tvinga hela hemsidan att använda Montserrat som standard */
+body, h1, h2, h3, h4, h5, h6, p, a, span {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+:root {
+  /* Färginställningar (Ljust läge) */
+  --text: #000000;    /* Helt svart normaltext */
+  --text-h: #000000;  /* Helt svart rubriktext */
+  --bg: #ffffff;      /* Vit bakgrund */
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  /* Ändrat till Montserrat */
+  --sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --heading: 'Montserrat', system-ui, -apple-system, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/145% var(--sans); /* Standard textstorlek för brödtext */
+  letter-spacing: 0.18px;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+}
+
+/* ÄNDRAT HÄR: Borttaget breddspärren på 1126px så navbaren sträcker sig hela vägen ut */
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left; /* Ändrat till vänsterställd text som standard istället för centrerad */
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+/* Gemensamma rubrikinställningar */
+h1, h2, h3 {
+  font-family: var(--heading);
+  color: var(--text-h);
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 0;
+}
+
+/* ÄNDRAT HÄR: H1 Storlek 30px */
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: left;
+  line-height: 120%;
+  padding-top: 20px;
+  @media (max-width: 768px) {
+    font-size: 26px; /* Något mindre på mobilen */
+  }
+}
+
+/* ÄNDRAT HÄR: H2 Storlek 24px */
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: left;
+  color: #9e7e3b;
+  padding-top: 10px;
+    @media (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+/* NYTT HÄR: H3 Storlek 18px */
+h3 {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 120%;
+  margin: left;
+  padding-bottom: 20px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin: left;
+  }
+}
+
+p {
+  margin: 0 0 15px 0;
+}
+    &:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+  &:hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+code {
+  font-family: var(--mono);
+  font-size: 14px;
+  padding: 4px 8px;
+  background: var(--code-bg);
+  border-radius: 4px;
+}
+
+
