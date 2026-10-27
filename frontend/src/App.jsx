@@ -12,7 +12,6 @@ import Contact from './pages/contact';
 import Exhibitions from './pages/exhibitions';
 import Fineart from './pages/fineart';
 import Gallery from './pages/gallery';
-import Gameboard from './pages/mem';
 import Interior from './pages/interior';
 import Media from './pages/media';
 import Soldart from './pages/soldart';
@@ -58,9 +57,8 @@ function App() {
     
   {/* Övriga sidor / Lekplatser */}
         <Route path="/camilla" element={<Camilla />} />
-        <Route path="/mem" element={<Gameboard />} />
         <Route path="/gallery" element={<Gallery />} />
-         <Route path="/memory" element={<Memory />} />
+        <Route path="/memory" element={<Memory />} />
       </Routes>
      </Router>
   );
