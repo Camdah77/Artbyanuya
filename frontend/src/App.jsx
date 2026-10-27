@@ -18,6 +18,7 @@ import Media from './pages/media';
 import Soldart from './pages/soldart';
 import Some from './pages/some';
 import Studio from './pages/studio';
+import Memory from './pages/memo/memory';
 
 function App() {
   const [message, setMessage] = useState('Laddar...');
@@ -59,6 +60,7 @@ function App() {
         <Route path="/camilla" element={<Camilla />} />
         <Route path="/mem" element={<Gameboard />} />
         <Route path="/gallery" element={<Gallery />} />
+         <Route path="/memory" element={<Memory />} />
       </Routes>
      </Router>
   );

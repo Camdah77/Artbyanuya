@@ -47,14 +47,14 @@ export default function Exhibitions() {
         </div>
       ) : (
         /* UTSTÄLLNINGSKORT (Bootstrap Grid - 3 per rad på dator, 1 på mobil) */
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+        <div className="row row-cols-1 row-cols-md-4 g-4">
           {exhibitions.map((exhib) => (
             <Col key={exhib.id}>
-              <Card className="h-100 shadow-sm border bg-white" style={{ borderRadius: '12px', overflow: 'hidden' }}>
+              <Card className="h-80 shadow-sm border bg-white" style={{ borderRadius: '12px', overflow: 'hidden' }}>
                 
-                {/* Utställningsbild (om du har sparat en Cloudinary-länk, annars en stilren platshållare) */}
+                {/* Utställningsbild */}
                 {exhib.image_main ? (
-                  <div style={{ height: '240px', overflow: 'hidden' }}>
+                  <div style={{ height: '100px', overflow: 'hidden' }}>
                     <img 
                       src={exhib.image_main} 
                       className="w-100 h-100" 
@@ -63,7 +63,7 @@ export default function Exhibitions() {
                     />
                   </div>
                 ) : (
-                  <div className="bg-light text-center d-flex align-items-center justify-content-center" style={{ height: '240px' }}>
+                  <div className="bg-light text-center d-flex align-items-center justify-content-center" style={{ height: '100px' }}>
                     <span className="text-muted small fst-italic" style={{ fontFamily: 'Montserrat, sans-serif' }}>Bild saknas</span>
                   </div>
                 )}

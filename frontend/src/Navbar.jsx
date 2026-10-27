@@ -46,8 +46,8 @@ export default function MyNavbar() {
             </NavDropdown>
 
             {/* Snabblänkar */}
-            <Nav.Link as={Link} to="/contact" className="px-3">Contact</Nav.Link>
-            <Nav.Link as={Link} to="/mem" className="px-3">Memory</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/memory">Memory</Nav.Link>
             
           </Nav>
         </Navbar.Collapse>
