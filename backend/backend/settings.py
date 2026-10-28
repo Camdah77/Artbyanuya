@@ -36,10 +36,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'taggit',
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
     'gallery',  # Din app!
+
 ]
 
 MIDDLEWARE = [

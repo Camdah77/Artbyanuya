@@ -5,8 +5,6 @@ function Header({
   turns,
   seconds,
   bestScore,
-  musicEnabled,
-  onMusicToggle,
   onNewGame,
   inactive,
 }) {
@@ -17,9 +15,9 @@ function Header({
       inert={inactive ? "" : undefined}
     >
       <div className="game-header__intro">
-        <p className="game-header__eyebrow">A memory challenge</p>
-        <h1>Match Game</h1>
-        <p>Find all six pairs and beat your best score.</p>
+        <p className="game-header__eyebrow">Art challenge</p>
+        <h1 style={{ fontFamily: 'Montserrat, sans-serif' }}>Match Game</h1>
+        <p>Take a break. Find six pairs and beat your best score.</p>
       </div>
 
       <div className="scoreboard" aria-label="Game statistics">
@@ -40,10 +38,6 @@ function Header({
       </div>
 
       <div className="game-header__actions">
-        <button className="secondary-button" type="button" onClick={onMusicToggle} aria-pressed={musicEnabled}>
-          <span aria-hidden="true">{musicEnabled ? "♫" : "♪"}</span>
-          {musicEnabled ? "Music on" : "Music off"}
-        </button>
         <button className="primary-button" type="button" onClick={onNewGame}>
           New game
         </button>

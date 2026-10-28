@@ -13,7 +13,7 @@
 
 .game-header__eyebrow {
   margin: 0 0 4px;
-  color: #ffcf71;
+  color: #9e7e3b;
   font-size: 0.75rem;
   font-weight: 900;
   letter-spacing: 0.15em;
@@ -30,7 +30,7 @@
 
 .game-header__intro > p:last-child {
   margin: 10px 0 0;
-  color: #c9c4e6;
+  color: #9e7e3b;
   font-weight: 600;
 }
 
@@ -58,7 +58,7 @@
 .scoreboard__item span {
   display: block;
   margin-bottom: 2px;
-  color: #aba5d1;
+  color: #9e7e3b;
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.1em;
@@ -117,5 +117,6 @@
   .game-header__actions > button {
     flex: 1;
     padding-inline: 12px;
+    background-color: #9e7e3b;
   }
 }

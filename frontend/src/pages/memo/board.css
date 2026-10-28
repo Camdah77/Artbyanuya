@@ -20,8 +20,8 @@
   backdrop-filter: blur(14px);
 }
 
-.primary-button,
-.secondary-button {
+.primary-button
+{
   min-height: 46px;
   padding: 10px 18px;
   border: 1px solid transparent;
@@ -38,22 +38,13 @@
   box-shadow: 0 8px 24px rgba(255, 190, 94, 0.24);
 }
 
-.secondary-button {
-  border-color: rgba(255, 255, 255, 0.26);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.primary-button:hover,
-.secondary-button:hover {
+.primary-button:hover
+ {
   transform: translateY(-2px);
 }
 
 .primary-button:hover {
   box-shadow: 0 12px 28px rgba(255, 190, 94, 0.34);
-}
-
-.secondary-button:hover {
-  background: rgba(255, 255, 255, 0.14);
 }
 
 .win-backdrop {

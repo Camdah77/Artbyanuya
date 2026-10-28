@@ -24,9 +24,7 @@ function Memory() {
   const [status, setStatus] = useState("ready");
   const [feedback, setFeedback] = useState("Choose a card to begin.");
   const [bestScore, setBestScore] = useState(readBestScore);
-  const [musicEnabled, setMusicEnabled] = useState(false);
-  const audioRef = useRef(null);
-
+ 
   const boardLocked = Boolean(secondChoiceId) || status === "won";
 
   const startNewGame = () => {
@@ -105,27 +103,14 @@ function Memory() {
     }
   }, [bestScore, cards, seconds, status, turns]);
 
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    if (musicEnabled) {
-      audio.play().catch(() => setMusicEnabled(false));
-    } else {
-      audio.pause();
-    }
-  }, [musicEnabled]);
-
+ 
   return (
     <main className="app-shell">
-      <audio ref={audioRef} src="/Playtime.mp3" loop preload="none" />
-
+   
       <Header
         turns={turns}
         seconds={seconds}
         bestScore={bestScore}
-        musicEnabled={musicEnabled}
-        onMusicToggle={() => setMusicEnabled((enabled) => !enabled)}
         onNewGame={startNewGame}
         inactive={status === "won"}
       />
@@ -155,7 +140,7 @@ function Memory() {
           <section className="win-panel" role="dialog" aria-modal="true" aria-labelledby="win-title">
             <span className="win-panel__sparkle" aria-hidden="true">✦</span>
             <p className="win-panel__eyebrow">Board complete</p>
-            <h2 id="win-title">You found every match!</h2>
+            <h2 id="win-title">Wow! You found every match!</h2>
             <p>
               Finished in <strong>{turns} tries</strong> and <strong>{formatTime(seconds)}</strong>.
             </p>

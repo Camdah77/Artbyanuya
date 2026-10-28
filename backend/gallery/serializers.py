@@ -1,13 +1,22 @@
 from rest_framework import serializers
-from .models import Artwork, Exhibition  # RÄTTAT: Tog bort 's' i slutet
+# RÄTTAT: Ändrat till TaggitSerializer (med t i mitten, inte able)
+from taggit.serializers import (TagListSerializerField, TaggitSerializer)
+from .models import Artwork, Exhibition
 
-class ArtworkSerializer(serializers.ModelSerializer):
+# RÄTTAT: Ändrat basklassens namn här också
+class ArtworkSerializer(TaggitSerializer, serializers.ModelSerializer):
+    tags = TagListSerializerField()
+
     class Meta:
         model = Artwork
-        fields = '__all__'
+        fields = [
+            'id', 'title', 'description', 'category', 'style', 
+            'price', 'image_main', 'image_env', 'image_detail', 
+            'created_at', 'is_sold', 'orientation', 'width', 
+            'height', 'size', 'tags'
+        ]
 
-# TILLAGD/RÄTTAT: Skapa en serializer för din utställningsmodell
 class ExhibitionSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Exhibition  # RÄTTAT: Utan 's'
-        fields = '__all__'
+        model = Exhibition
+        fields = ['id', 'year', 'image_main', 'gallery', 'exhibtype', 'arrangeby', 'readmore']

@@ -18,7 +18,7 @@ function SingleCard({ card, cardNumber, onChoose, flipped, disabled }) {
           {card.matched && <span className="memory-card__match-mark">✓</span>}
         </span>
         <span className="memory-card__face memory-card__back">
-          <img src="/img/cover.webp" alt="" draggable="false" />
+          <img src="https://res.cloudinary.com/dj9sie6nl/image/upload/v1792529163/Anuya/memory/mem-front_p2yc8k.jpg" alt="Elephant" draggable="false" />
         </span>
       </span>
     </button>
