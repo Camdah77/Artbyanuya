@@ -15,9 +15,9 @@ export default function MyNavbar() {
           <img 
             src="https://res.cloudinary.com/dj9sie6nl/image/upload/v1792328790/Anuya/logo_300x300_tcxobj.png" 
             alt="Artbyanuya Logo" 
-            width="65"  
-            height="65" 
-            className="me-2 rounded-circle"
+            width="100"  
+            height="100" 
+            className="me-2 d-inline-block align-top"
           />
         </Navbar.Brand>
 
@@ -33,21 +33,22 @@ export default function MyNavbar() {
               <NavDropdown.Item as={Link} to="/gallery/original">Original Art</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/gallery/fine-art">Fine Art</NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/gallery/interior">Home Interior</NavDropdown.Item>
+               <NavDropdown.Item as={Link} to="/gallery/sold">Sold Art</NavDropdown.Item>
             </NavDropdown>
             
-            {/* Dropdown: Camilla */}
-            <NavDropdown title="Camilla" id="camilla-dropdown" className="px-1">
-              <NavDropdown.Item as={Link} to="/camilla/story">My story</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/camilla/exhibitions">Exhibitions</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/camilla/media">Media</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/camilla/sold">Sold Art</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/camilla/social">Social Media</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/camilla/studio">Studio</NavDropdown.Item>
+            {/* Dropdown: Inspiration */}
+            <NavDropdown title="Inspiration" id="inspiration-dropdown" className="px-1">
+              <NavDropdown.Item as={Link} to="story">My story</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="exhibitions">Exhibitions</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="studio">In the studio</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="media">Media</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="social">Social Media</NavDropdown.Item>
             </NavDropdown>
 
             {/* Snabblänkar */}
+            <Nav.Link as={Link} to="/memory">Art-Memory</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-            <Nav.Link as={Link} to="/memory">Memory</Nav.Link>
+           
             
           </Nav>
         </Navbar.Collapse>

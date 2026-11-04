@@ -12,7 +12,7 @@ export default function MyStory() {
       <div className="row justify-content-start text-start mb-5">
         <div className="col-md-8">
           <h2 className="fw-bold mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>My creative journey</h2>
-          <p className="text-muted fs-5" style={{ lineHeight: '160%', fontFamily: 'Montserrat, sans-serif' }}>
+          <p className="text-muted fs-6" style={{ lineHeight: '160%', fontFamily: 'Montserrat, sans-serif' }}>
             Welcome behind the scenes to my creative sanctuary. This is where colors splash, ideas come alive, and every artwork begins its story.
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function MyStory() {
       </Card.Title>
       
       {/* Ökat avståndet mellan titel och text genom mt-3 (margin-top) */}
-      <Card.Text className="text-secondary small mb-3 mt-3" style={{ lineHeight: '2' }}>
+      <Card.Text className="text-secondary small mb-2 mt-3" style={{ lineHeight: '2' }}>
         I sold my first painting in 2018. Since then, I have been painting and selling my artworks all over the world.
         I love painting faces from different cultures, and I often combine them with abstract elements and the power of animals.
         
@@ -83,7 +83,7 @@ export default function MyStory() {
         </Card.Text>
       
       <Link 
-        to="/camilla/exhibitions" 
+        to="/inspiration/exhibitions" 
         className="text-dark d-inline-block"
         style={{ fontSize: '15px' }}
       >
@@ -119,7 +119,7 @@ export default function MyStory() {
         </Card.Text>
       
       <Link 
-        to="/camilla/studio" 
+        to="/inspiration/studio" 
         className="text-dark d-inline-block"
         style={{ fontSize: '15px' }}
       >

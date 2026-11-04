@@ -42,14 +42,14 @@ function App() {
         <Route path="/gallery/original" element={<OriginalArt />} />
         <Route path="/gallery/fine-art" element={<Fineart />} />
         <Route path="/gallery/interior" element={<Interior />} />
+         <Route path="/gallery/sold" element={<Soldart />} />
 
-        {/* Dropdown: Camilla */}
-        <Route path="/camilla/story" element={<MyStory />} />
-        <Route path="/camilla/exhibitions" element={<Exhibitions />} />
-        <Route path="/camilla/media" element={<Media />} />
-        <Route path="/camilla/sold" element={<Soldart />} />
-        <Route path="/camilla/studio" element={<Studio />} />
-        <Route path="/camilla/social" element={<Some />} />
+        {/* Dropdown: Inspiration */}
+        <Route path="/story" element={<MyStory />} />
+        <Route path="/exhibitions" element={<Exhibitions />} />
+        <Route path="/media" element={<Media />} />
+        <Route path="/studio" element={<Studio />} />
+        <Route path="/social" element={<Some />} />
 
         {/* Contact-sidan nås direkt på /contact */}
         <Route path="/contact" element={<Contact />} />
