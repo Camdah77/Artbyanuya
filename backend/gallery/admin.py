@@ -4,9 +4,9 @@ from .models import Artwork, Exhibition
 @admin.register(Artwork)
 class ArtworkAdmin(admin.ModelAdmin):
     # Detta bestämmer vilka kolumner som syns i listan
-    list_display = ('title', 'category', 'style', 'price', 'is_sold', 'created_at')
+    list_display = ('title', 'category', 'price', 'is_sold', 'created_at')
     # Lägger till ett filtersystem på högerkanten
-    list_filter = ('category', 'style', 'is_sold')
+    list_filter = ('category', 'is_sold')
     # Gör att du kan söka på titel eller beskrivning
     search_fields = ('title', 'description')
 

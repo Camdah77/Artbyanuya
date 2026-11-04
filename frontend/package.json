@@ -14,11 +14,13 @@
     "bootstrap": "^5.3.8",
     "react": "^19.2.8",
     "react-bootstrap": "^2.10.10",
+    "react-card-flip": "^1.2.3",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.4",
     "reactjs-flip-card": "^2.0.3",
     "reactjs-popup": "^2.0.6",
-    "sass": "^1.106.1"
+    "sass": "^1.106.1",
+    "the-footer": "^2.1.8"
   },
   "devDependencies": {
     "@types/react": "^19.2.18",

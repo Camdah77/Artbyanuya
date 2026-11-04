@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from './Navbar';
+import Footer from './pages/footer';
 
 // Importera sidorna
 import Home from './pages/home';
@@ -37,31 +38,32 @@ function App() {
       <Routes>
         <Route path="/" element={<Home backendMessage={message} />} />
 
-  {/* Dropdown: Gallery */}
+        {/* Dropdown: Gallery */}
         <Route path="/gallery/original" element={<OriginalArt />} />
         <Route path="/gallery/fine-art" element={<Fineart />} />
         <Route path="/gallery/interior" element={<Interior />} />
 
-  {/* Dropdown: Camilla */}
-  
+        {/* Dropdown: Camilla */}
         <Route path="/camilla/story" element={<MyStory />} />
         <Route path="/camilla/exhibitions" element={<Exhibitions />} />
         <Route path="/camilla/media" element={<Media />} />
         <Route path="/camilla/sold" element={<Soldart />} />
-  {/* RÄTTAT: Matchar nu navbarens länk /camilla/social */}
         <Route path="/camilla/studio" element={<Studio />} />
         <Route path="/camilla/social" element={<Some />} />
 
-  {/* RÄTTAT: Contact-sidan nås nu direkt på /contact */}
+        {/* Contact-sidan nås direkt på /contact */}
         <Route path="/contact" element={<Contact />} />
     
-  {/* Övriga sidor / Lekplatser */}
+        {/* Övriga sidor / Lekplatser */}
         <Route path="/camilla" element={<Camilla />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/memory" element={<Memory />} />
       </Routes>
-     </Router>
-  );
 
+      {/* Footer ligger alltid längst ner på alla sidor */}
+      <Footer />
+    </Router>
+  );
 }
+
 export default App;

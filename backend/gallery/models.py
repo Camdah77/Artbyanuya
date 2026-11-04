@@ -21,21 +21,9 @@ class Artwork(models.Model):
         ('vertical', 'Vertical(30x40, 50x70, 80x100)'),
     ]
 
-    STYLE_CHOICES = [
-        ('abstract', 'Abstract'),
-        ('landscape', 'Landscape'),
-        ('faces', 'Faces'),
-        ('animals', 'Animals'),
-        ('figurative', 'Figurative'),
-        ('portraiture', 'Portraiture'),
-        ('commission', 'Commission'),
-        ('other', 'Other'),
-    ]
-
     title = models.CharField(max_length=200, verbose_name="Titel")
     description = models.TextField(blank=True, verbose_name="Description")
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='original', verbose_name="Category")
-    style = models.CharField(max_length=20, choices=STYLE_CHOICES, default='abstract', verbose_name="Style")
     price = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True, verbose_name="SEK Price")
     
     image_main = models.URLField(max_length=500, blank=True, verbose_name="Main image (Cloudinary-länk)")
