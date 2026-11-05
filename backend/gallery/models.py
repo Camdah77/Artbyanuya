@@ -30,7 +30,7 @@ class Artwork(models.Model):
     image_env = models.URLField(max_length=500, blank=True, verbose_name="Environment image (Cloudinary-länk)")
     image_detail = models.URLField(max_length=500, blank=True, verbose_name="Detail image (Cloudinary-länk)")
     
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Year Created")
+    created_at = models.IntegerField(default=2026, verbose_name="Year Created")
     is_sold = models.BooleanField(default=False, verbose_name="Sold")
     orientation = models.CharField(max_length=20, choices=ORIENTATION_CHOICES, default='square', verbose_name="Orientation")
     

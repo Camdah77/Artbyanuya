@@ -13,7 +13,7 @@ export default function MyNavbar() {
         {/* RÄTTAT 1: Loggan ligger nu inuti en helt korrekt stängd Link-komponent */}
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center py-0">
           <img 
-            src="https://res.cloudinary.com/dj9sie6nl/image/upload/v1793788141/Logo__9e7e3b_iwxjht.png" 
+            src="https://res.cloudinary.com/dj9sie6nl/image/upload/v1793813646/anuya_svart_bottom_gswsbz.png" 
             alt="Artbyanuya Logo" 
             width="150"  
             className="me-2 d-inline-block align-top"

@@ -129,7 +129,4 @@ export default function MyStory() {
   </Card></Col>
       </Row>
     </Container>
-
-
-)
-}
+  )}

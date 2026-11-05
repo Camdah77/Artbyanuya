@@ -19,6 +19,7 @@ import Soldart from './pages/soldart';
 import Some from './pages/some';
 import Studio from './pages/studio';
 import Memory from './pages/memo/memory';
+import ArtworkDetail from './pages/ArtworkDetail'; 
 
 function App() {
   const [message, setMessage] = useState('Laddar...');
@@ -39,7 +40,7 @@ function App() {
         <Route path="/" element={<Home backendMessage={message} />} />
 
         {/* Dropdown: Gallery */}
-        <Route path="/gallery/original" element={<OriginalArt />} />
+         <Route path="/gallery/original" element={<OriginalArt />} />
         <Route path="/gallery/fine-art" element={<Fineart />} />
         <Route path="/gallery/interior" element={<Interior />} />
          <Route path="/gallery/sold" element={<Soldart />} />
@@ -54,7 +55,9 @@ function App() {
         {/* Contact-sidan nås direkt på /contact */}
         <Route path="/contact" element={<Contact />} />
     
-        {/* Övriga sidor / Lekplatser */}
+        {/* Övriga sidor /  */}
+        <Route path="/" element={<Home backendMessage={message} />} />
+         <Route path="/gallery/original/:id" element={<ArtworkDetail />} />
         <Route path="/camilla" element={<Camilla />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/memory" element={<Memory />} />
