@@ -10,7 +10,8 @@ import ReactCardFlipModule from "react-card-flip";
 
 export default function Home() {
   const [index, setIndex] = useState(0);
-  const [flip, setFlip] = useState(false);
+  const [availableArt, setAvailableArt] = useState([]);
+  const [loadingArt, setLoadingArt] = useState(true);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
